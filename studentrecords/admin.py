@@ -15,6 +15,8 @@ from import_export.admin import ImportExportMixin, ImportExportModelAdmin
 
 class StudyCenterAdmin(ImportExportModelAdmin):
     resource_class = StudyCenterResource
+    list_display = ('center_name', 'center_address')
+    ordering = ['center_name']
 
 
 class ProgramTypeAdmin(ImportExportModelAdmin):

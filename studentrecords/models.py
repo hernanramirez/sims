@@ -6,10 +6,9 @@ from smart_selects.db_fields import ChainedForeignKey, GroupedForeignKey
 
 class StudyCenter(models.Model):
     """Model for Recording study center detail"""
-    center_name = models.CharField(max_length=200, unique=True,
-                                   primary_key=True)
+    center_name = models.CharField(max_length=200)
     center_address = models.CharField(max_length=255, blank=True, null=True)
-    center_phone = models.CharField(max_length=100, blank=True, null=True)
+    center_phone = models.CharField(max_length=200, blank=True, null=True)
 
     def __unicode__(self):
         return self.center_name
